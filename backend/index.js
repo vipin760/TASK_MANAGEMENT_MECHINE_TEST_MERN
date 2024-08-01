@@ -17,7 +17,9 @@ connectDb();
 
 // routes
 const task_routes = require('./routes/task.routes')
+const user_routes = require('./routes/user.routes')
 app.use('/',task_routes);
+app.use('/user',user_routes);
 
 app.listen(port,()=>{
     console.log(`server connetced on port ${process.env.PORT}`);

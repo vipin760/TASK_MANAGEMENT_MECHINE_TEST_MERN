@@ -52,7 +52,6 @@ const Home = () => {
   const handleDelete = async (id) => {
     try {
       await axios.delete(`${API_URL}?id=${id}`).then((res) => {
-        setUpdateButton(false);
         fetchData();
       });
     } catch (error) {
@@ -93,7 +92,7 @@ const Home = () => {
             <input
               type="text"
               placeholder="enter task here...."
-              className="border max-w-sm px-1 rounded-md"
+              className="border max-w-sm px-2 rounded-md py-1 text-black"
               name="title"
               value={formData.title}
               onChange={handleChange}
